@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
 // ✅ เส้นทางวัสดุ
 app.use('/api/materials', require('./routes/materials'));
 
-app.listen(port, () => {
-  console.log(`✅ Server running at http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`✅ Server running on port ${port}`);
 });
+
